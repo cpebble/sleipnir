@@ -1,4 +1,5 @@
-from .dutil import DockerEventParser
+from dutil import DockerEventParser
+import utils
 import time
 from pprint import pprint
 
@@ -19,7 +20,7 @@ if __name__ == "__main__":
     print("A")
     dep.start_parsing(handle_docker_event)
     print("B")
-    time.sleep(20)
+    time.sleep(10)
     print("C")
     dep.stop_parsing()
 

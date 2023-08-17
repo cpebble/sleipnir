@@ -1,9 +1,10 @@
 import docker
+import os
 import logging
 import multiprocessing as mp
 
-logger = logging.getLogger("EventParser")
-#logger.setLevel(logging.DEBUG)
+logger = logging.getLogger()
+logger.setLevel(os.getenv("LOGLEVEL", "INFO"))
 
 class NotImplementedException(Exception):
     pass
